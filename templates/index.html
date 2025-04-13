@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Landed by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('skull') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+</head>
+<body class="is-preload landing">
+
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1 id="logo"><a href="{{ url_for('my_home') }}">Landed</a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="{{ url_for('my_home') }}">Home</a></li>
+                <li>
+                    <a href="#">Projects</a>
+                    <ul>
+                        <li><a href="{{ url_for('left_sidebar') }}">Left Sidebar</a></li>
+                        <li><a href="{{ url_for('right_sidebar') }}">Right Sidebar</a></li>
+                        <li>
+                            <a href="#">Submenu</a>
+                            <ul>
+                                <li><a href="#">Option 1</a></li>
+                                <li><a href="#">Option 2</a></li>
+                                <li><a href="#">Option 3</a></li>
+                                <li><a href="#">Option 4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('elements') }}">About me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="content">
+            <header>
+                <h2>Erolt's page</h2>
+                <p>Informative website<br />
+                    Python developer and Electronic Engineer</p>
+            </header>
+            <span class="image"><img src="{{ url_for('static', filename='images/pic01.jpg') }}" alt="" /></span>
+        </div>
+        <a href="#one" class="goto-next scrolly">Next</a>
+    </section>
+
+    <!-- One -->
+    <section id="one" class="spotlight style1 bottom">
+        <span class="image fit main"><img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" /></span>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 col-12-medium">
+                        <header>
+                            <h2>Make it easier for you</h2>
+                            <p>Having a personal website, just like that</p>
+                        </header>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <p>Specialised in making personal websites and AI chatbots.</p>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <p>Contact me for everything regarding your company. For website, chatbot, marketing, etc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#two" class="goto-next scrolly">Next</a>
+    </section>
+
+    <!-- Two -->
+    <section id="two" class="spotlight style2 right">
+        <span class="image fit main"><img src="{{ url_for('static', filename='images/pic03.jpg') }}" alt="" /></span>
+        <div class="content">
+            <header>
+                <h2>Interdum amet non magna accumsan</h2>
+                <p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
+            </header>
+            <p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing...</p>
+            <ul class="actions">
+                <li><a href="#" class="button">Learn More</a></li>
+            </ul>
+        </div>
+        <a href="#three" class="goto-next scrolly">Next</a>
+    </section>
+
+    <!-- Three -->
+    <section id="three" class="spotlight style3 left">
+        <span class="image fit main bottom"><img src="{{ url_for('static', filename='images/pic04.jpg') }}" alt="" /></span>
+        <div class="content">
+            <header>
+                <h2>Interdum felis blandit praesent sed augue</h2>
+                <p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
+            </header>
+            <p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing...</p>
+            <ul class="actions">
+                <li><a href="#" class="button">Learn More</a></li>
+            </ul>
+        </div>
+        <a href="#footer" class="goto-next scrolly">Next</a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.dropotron.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+</html>
