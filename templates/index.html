@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
     <noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
 </head>
+
 <body class="is-preload landing">
 
 <div id="page-wrapper">
 
     <!-- Header -->
     <header id="header">
-        <h1 id="logo"><a href="{{ url_for('my_home') }}">Welcome</a></h1>
+        <h1 id="logo"><a href="{{ url_for('index') }}">Welcome</a></h1>
         <nav id="nav">
             <ul>
-                <li><a href="{{ url_for('my_home') }}">Home</a></li>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
                 <li>
                     <a href="#">Projects</a>
                     <ul>
@@ -45,32 +46,28 @@
 
     <!-- One -->
     <section id="one" class="spotlight style1 bottom">
-    <span class="image fit main">
-        <img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" />
-    </span>
-    <div class="content">
-        <div class="container">
-            <div class="row">
-                <!-- Left side: ML & AI -->
-                <div class="col-6 col-12-medium">
-                    <header>
-                        <h2>🚀 Machine Learning & AI</h2>
-                        <p>I create smart solutions using machine learning and AI — from predictive models to data analysis tools.</p>
-                    </header>
-                </div>
-                <!-- Right side: Automation & Scripting -->
-                <div class="col-6 col-12-medium" style="text-align: right;">
-                    <header>
-                        <h2>⚙️ Automation & Scripting</h2>
-                        <p>I build powerful automation scripts that simplify tasks, save time, and improve workflows.</p>
-                    </header>
+        <span class="image fit main"><img src="{{ url_for('static', filename='images/pic02.jpg') }}" alt="" /></span>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <!-- Left side: ML & AI -->
+                    <div class="col-6 col-12-medium">
+                        <header>
+                            <h2>🚀 Machine Learning & AI</h2>
+                            <p>I create smart solutions using machine learning and AI — from predictive models to data analysis tools.</p>
+                        </header>
+                    </div>
+                    <!-- Right side: Automation & Scripting -->
+                    <div class="col-6 col-12-medium" style="text-align: right;">
+                        <header>
+                            <h2>⚙️ Automation & Scripting</h2>
+                            <p>I build powerful automation scripts that simplify tasks, save time, and improve workflows.</p>
+                        </header>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <a href="#two" class="goto-next scrolly">Next</a>
-</section>
-
+        <a href="#two" class="goto-next scrolly">Next</a>
     </section>
 
     <!-- Two -->
@@ -82,7 +79,6 @@
                 <p>Modern, responsive websites using Python, Flask, HTML, and CSS — designed for performance and clarity.</p>
             </header>
             <p>Whether it's a personal portfolio or a functional web app, I focus on clean design, user experience, and maintainable code.</p>
-
         </div>
         <a href="#three" class="goto-next scrolly">Next</a>
     </section>
@@ -96,7 +92,6 @@
                 <p>With hands-on experience in engineering, software, and systems.</p>
             </header>
             <p>I help bring digital ideas to life with scalable and efficient solutions.</p>
-
         </div>
         <a href="#footer" class="goto-next scrolly">Next</a>
     </section>
@@ -104,17 +99,29 @@
     <!-- Footer -->
     <footer id="footer">
         <ul class="icons">
-
             <li><a href="https://www.linkedin.com/in/erolt-la%C3%A7i-8b9b821a4/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
             <li><a href="https://www.instagram.com/erolt.laci/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
             <li><a href="https://github.com/Erolt96" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-
         </ul>
         <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li><li>Design by: <a >Erolt Laci</a></li>
+            <li>&copy; Untitled. All rights reserved.</li><li>Design by: <a>Erolt Laci</a></li>
         </ul>
     </footer>
+</div>
 
+<!-- Floating Chat Button -->
+<div id="chat-button" onclick="toggleChatbox()">💬</div>
+
+<!-- Floating Chatbox -->
+<div id="chatbox">
+    <h4>Ask My AI Bot</h4>
+    <form method="post" action="/">
+        <input name="user_input" type="text" placeholder="Type your question..." required>
+        <button type="submit">Send</button>
+    </form>
+    {% if response %}
+        <div class="chat-response"><strong>Bot:</strong> {{ response }}</div>
+    {% endif %}
 </div>
 
 <!-- Scripts -->
@@ -126,6 +133,26 @@
 <script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
 <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+<!-- Toggle chatbox script -->
+<script>
+    function toggleChatbox() {
+        var box = document.getElementById("chatbox");
+        if (box.style.display === "none" || box.style.display === "") {
+            box.style.display = "block";
+        } else {
+            box.style.display = "none";
+        }
+    }
+
+    // 👇 Auto-open chatbox if there’s a bot response
+    window.onload = function () {
+        {% if response %}
+        document.getElementById("chatbox").style.display = "block";
+        {% endif %}
+    };
+</script>
+
 
 </body>
 </html>

@@ -1,10 +1,34 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import openai
+from openai import OpenAI
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 
 app = Flask(__name__)
 
-@app.route('/')
-def my_home():
-    return render_template('index.html')   #return "<p>Hello, OLTIIIIII!</p>" mund te bejme kete ose thirrim HTML
+@app.route("/", methods=["GET", "POST"])
+def index():
+    response_text = ""
+    if request.method == "POST":
+        user_input = request.form["user_input"]
+        response = client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=[
+                {"role": "system",
+                 "content": "You are a helpful assistant for Erolt Laci's personal portfolio site. Answer questions about him, his services, and projects in Python, AI, and automation. If you're unsure, ask them to check the page or contact him directly."},
+                {"role": "user", "content": user_input}
+            ]
+
+        )
+        response_text = response.choices[0].message.content
+    return render_template("index.html", response=response_text)
+
+   #return "<p>Hello, OLTIIIIII!</p>" mund te bejme kete ose thirrim HTML
 
 @app.route('/about.html')
 def about():
