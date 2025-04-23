@@ -56,3 +56,6 @@ def skull():
 
 # per tu fut tek venv tek cmd shkruj kete: "venv\Scripts\activate", pastaj thirr flask ne cmd: "flask --app server run"
 # per te aktivizu DEBUG : "flask --app server run --debug"
+
+if __name__ == "__main__":
+    app.run(debug=True)
