@@ -1,35 +1,35 @@
-Landed by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Personal Website 🚀
+
+A responsive, AI-powered personal website built with a sleek HTML template and enhanced with server-side functionality and OpenAI chat integration.
+
+## 🌟 Features
+
+- 💼 Personal portfolio layout (About Me, Projects, Contact)
+- 🤖 Integrated AI Chat Assistant using OpenAI API
+- ⚙️ Backend server support (Flask)
+- 📱 Fully responsive design with modern UI
+- 🌐 Deployed and runs locally with ease
+
+## 🛠️ Tech Stack
+
+- Frontend: HTML5, CSS3, JavaScript
+- Backend: [Flask]
+- AI: OpenAI GPT via API
 
 
-A dark, slick, modern, responsive, adjective-drenched design built around an extremely
-dynamic landing page (scroll that mofo!). Inspired by Big Picture, another design
-of mine with a similarish feel/flow, only this time I took it waaaaaay further and
-actually made it multipurpose (versus copping out and making it a one pager like I
-did last time ;) Includes multiple pages, a bunch of pre-styled elements, and all
-its Sass sources.
+## 🚀 Getting Started
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+Clone the project:
 
-(* = Not included)
+```bash
+git clone https://github.com/Erolt96/porto.git (master branch)
+cd porto
 
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
+# if using Flask
+pip install -r requirements.txt
 
-AJ
-aj@lkn.io | @ajlkn
+# or if using Node.js
+npm install
 
+Setup .env : OPENAI_API_KEY=your-api-key-here
 
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
