@@ -1,5 +1,12 @@
 # Personal Website 🚀
 
+---
+
+You can change the tech stack, deployment details, screenshots, and names to match your setup.
+
+Want me to tailor this more to your actual structure? (e.g., Flask or Node, specific template name, etc.)
+
+
 A responsive, AI-powered personal website built with a sleek HTML template and enhanced with server-side functionality and OpenAI chat integration.
 
 ## 🌟 Features
