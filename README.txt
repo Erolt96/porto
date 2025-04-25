@@ -1,10 +1,12 @@
 # Personal Website 🚀
+
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-In_Progress-orange)
 
 
 ---
+
 ![Porto Website Preview](screenshots/cover.png)
 
 
